@@ -1,0 +1,161 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    background: #130f0d;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-form {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.container-form form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 18px;
+    color: red;
+}
+
+form input {
+    flex: 1;
+    background: #1a1a1c;
+    border: 1px solid #fd951f11;
+    border-radius: 4px;
+    padding: 15px 20px;
+    margin-right: 10px;
+    transition: border .4s;
+
+    font-size: 16px;
+    color: white;
+}
+form input:focus {
+    border-color: #fd951fcc;
+}
+
+form select {
+    width: 160px;
+    background: #1a1a1c;
+    border: 1px solid #fd951f11;
+    border-radius: 4px;
+    padding: 15px 10px;
+    margin-right: 10px;
+    transition: border .4s;
+
+    font-size: 16px;
+    color: white;
+}
+form select:focus {
+    border-color: #fd951fcc;   
+}
+
+form .button {
+    background: #fd951fcc;
+    border: 0;
+    border-radius: 4px;
+    padding: 15px 40px;
+    cursor: pointer;
+
+    font-size: 16px;
+    color: white;
+    font-weight: 600;
+}
+
+.boards {
+    display: flex;
+}
+
+.board {
+    background: #141316;
+    border: 1px solid #fd951f11;
+    border-radius: 4px;
+}
+.board + .board {
+    margin-left: 30px;
+}
+
+.board h3 {
+    padding: 16px;
+    margin: 0;
+    color: #fd951fcc;
+}
+
+.dropzone {
+    min-width: 280px;
+    min-height: 200px;
+    padding: 16px;
+}
+
+.card {
+    width: 250px;
+    background: #1a1a1c;
+    border-bottom: 2px solid #fd951fcc;
+    border-radius: 4px;
+    padding: 16px;
+    margin: 20px 0;
+}
+
+.dropzone, .card {
+    transition: all .4s;
+}
+
+.card .status {
+    width: 30px;
+    height: 8px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.card .status.green {
+    background: #23d2ac;   
+}
+.card .status.blue {
+    background: #33adff;
+}
+.card .status.red {
+    background: red;
+}
+
+.card .content {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/** Dropzone */
+.highlight {
+    background: #fd951f08;
+}
+
+.dragover {
+    background: #4cd13711;
+}
+
+/** card */
+.is-dragging {
+    cursor: move;
+    opacity: 0.3;
+}
